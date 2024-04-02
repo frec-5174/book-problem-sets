@@ -53,11 +53,15 @@ bart_2019 <- d  %>%
 
 First create a function called \`pred_logistic' that is your process model. The model is the the logistic curve which ish the equation $$P_1 + P_2 {{exp(P_3 + P_4 x)}\over{1+exp(P_3 + P_4 x)}}$$
 
-**Question 3:** Is this process model a dynamic model? Why or why not?
+**Question 3:** Based on the equation above, write a function that predicts the gcc_90 as a function of the parameters ($P$) and x where x is the DOY. Name that function `pred_logistic`.
 
 **Answer 3:**
 
-**Question 4:** Based on the equation above, write a function that predicts the gcc_90 as a function of the parameters ($P$) and x where x is the DOY. Name that function `pred_logistic`.
+```{r}
+
+```
+
+**Question 4:** Write a function that calculates the negative log-likelihood of the data given a set of parameters governing the process and data models. Assume a normal distribution and be sure to estimate the sd in the data model.
 
 **Answer 4:**
 
@@ -65,7 +69,7 @@ First create a function called \`pred_logistic' that is your process model. The 
 #Add Answer
 ```
 
-**Question 5:** Write a function that calculates the negative log-likelihood of the data given a set of parameters governing the process and data models. Assume a normal distribution and be sure to estimate the sd in the data model.
+**Question 5:** Use the `optim` function to find the most likely parameter values. Use the following as starting values `par = c(0.34,0.11,-15,0.11, 1)` where the first four are the theta parameters from your process model and the fifth is the sd of your data model.
 
 **Answer 5:**
 
@@ -73,7 +77,7 @@ First create a function called \`pred_logistic' that is your process model. The 
 #Add Answer
 ```
 
-**Question 6:** Use the `optim` function to find the most likely parameter values. Use the following as starting values `par = c(0.34,0.11,-15,0.11, 1)` where the first four are the theta parameters from your process model and the fifth is the sd of your data model.
+**Question 6:** Use your optimal parameters in the `pred_logistic` function to predict the data. Save this as the object `predicted`
 
 **Answer 6:**
 
@@ -81,7 +85,7 @@ First create a function called \`pred_logistic' that is your process model. The 
 #Add Answer
 ```
 
-**Question 7:** Use your optimal parameters in the `pred_logistic` function to predict the data. Save this as the object `predicted`
+**Question 7:** Calculate the residuals and plot a histogram of the residuals
 
 **Answer 7:**
 
@@ -89,29 +93,21 @@ First create a function called \`pred_logistic' that is your process model. The 
 #Add Answer
 ```
 
-**Question 8:** Calculate the residuals and plot a histogram of the residuals
+**Question 8:** How does the distribution of the data (Question 2) compare to the distribution of the residuals?
 
 **Answer 8:**
 
+**Question 9:** Predict year 2020 using the process model parameters from the 2019 fit.
+
 ```{r}
 #Add Answer
 ```
-
-**Question 9:** How does the distribution of the data (Question 2) compare to the distribution of the residuals?
 
 **Answer 9:**
 
-**Question 10:** Predict year 2020 using the process model parameters from the 2019 fit.
-
-```{r}
-#Add Answer
-```
+**Question 10:** Plot the forecast from Question 10 over the data from 2020 (I give the code for getting the 2020 data)
 
 **Answer 10:**
-
-**Question 11:** Plot the forecast from Question 10 over the data from 2020 (I give the code for getting the 2020 data)
-
-**Answer 11:**
 
 ```{r}
 bart_2020 <- d  %>%
@@ -124,11 +120,11 @@ bart_2020 <- d  %>%
          observation > 0)
 ```
 
-**Question 12:** Do you think your model from 2019 is reasonable for predicting 2020?
+**Question 11:** Do you think your model from 2019 is reasonable for predicting 2020?
 
-**Answer 12:**
+**Answer 11:**
 
-### Part 2 {#sec-q10}
+### Part 2
 
 Using the following data
 

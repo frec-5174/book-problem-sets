@@ -1,12 +1,14 @@
 ---
-title: "Parameter calibration: Bayesian methods"
-format: html
+title: "Bayesian methods problem set"
+format:
+  html:
+    embed-resources: true
 editor: visual
 ---
 
 ## Problem set
 
-Your task is to modify the code below to estimate the posterior distribution of parameters in Q10 function that was in the likelihood analysis exercise. Use the same data as used in the Q10 likelihood exercise.
+Your task is to modify the code below to estimate the posterior distribution of parameters in Q10 function that was in the likelihood analysis problem set. Use the same data as used in the Q10 likelihood exercise.
 
 ```{r}
 #| warning: FALSE
@@ -138,11 +140,15 @@ p2 <- ggplot(d, aes(x = value)) +
 p1 / p2
 ```
 
-**Question 1**: Provide the distribution and parameters describing the distribution for your prior distributions. Justify why you chose the distribution and parameters. (do not spend time looking at the literature for values to use to build prior distribution - just give plausible priors and say why their plausible)
+**Question 1**: 
+
+Provide the distribution name and distribution parameters describing your prior distributions. Justify why you chose the distribution and parameters. (do not spend time looking at the literature for values to use to build prior distribution - just give plausible priors and say why they are plausible)
 
 **Answer 1:**
 
-**Question 2:** Provide plots of your prior distributions.
+**Question 2:** 
+
+Provide plots of your prior distributions.
 
 **Answer 2:**
 
@@ -151,7 +157,9 @@ p1 / p2
 
 ```
 
-**Question 3:** Modify the code above to estimate the posterior distribution of your parameters. Put your modified code below.
+**Question 3:** 
+
+Modify the code above to estimate the posterior distribution of your parameters. Put your modified code below.
 
 **Answer 3:**
 
@@ -160,7 +168,9 @@ p1 / p2
 
 ```
 
-**Question 4:** Plot the your MCMC chain for all parameters (iteration \# will be the x-axis)
+**Question 4:** 
+
+Plot the your MCMC chain for all parameters (iteration number will be the x-axis and parameter value will be the y-axis)
 
 **Answer 4:**
 
@@ -169,11 +179,15 @@ p1 / p2
 
 ```
 
-**Question 5:** Approximately how many iterations did it take your chain to converge to a straight line with constant variation around the line (i.e., a fuzzy caterpillar). This is the burn-in. If your chain did not converge, modify the `jump` variable for each parameters and/or increase your iterations. You should not need more than 10000 iterations for convergence so running the chain for a long period of time will not fix issues that could be fixed by modifying the `jump` variable. Also, pay attention to the `sd_data` parameter. You should estimate it as a parameter or set it to a reasonable value. If it is too small your chain will fail because the probability of the some of parameters that are explored functionally zero.
+**Question 5:** 
+
+Approximately how many iterations did it take your chain to converge to a straight line with constant variation around the line (i.e., a fuzzy caterpillar). This is the burn-in. If your chain did not converge, modify the `jump` variable for each parameters and/or increase your iterations. You should not need more than 10000 iterations for convergence so running the chain for a long period of time will not fix issues that could be fixed by modifying the `jump` variable. 
 
 **Answer 5:**
 
-**Question 6:** Remove the iterations between 1 and your burn-in number and plot the histograms for your parameters.
+**Question 6:** 
+
+Remove the iterations between 1 and your burn-in number and plot the histograms for your parameters.
 
 ```{r}
 
@@ -191,7 +205,9 @@ p1 / p2
 
 **Answer 7:**
 
-**Question 8:** Random select 1000 values from the parameters in your posterior distribution. Show the randomly selected values for each parameter as a histogram.
+**Question 8:** 
+
+Randomly select 1000 values from the parameters in your posterior distribution. Show the randomly selected values for each parameter as a histogram.
 
 **Answer 8:**
 
@@ -200,7 +216,9 @@ p1 / p2
 
 ```
 
-**Question 9:** Use the samples from Question 8 to generate posterior predictions of soil respiration at the observed temperature values (i.e., the same temperature data used in your model fit). Provide a plot with temperature on the x-axis and respiration on the y-axis. The plot should have the mean and 95% predictive uncertainty bounds (i.e., include uncertainty in parameters and in the data model)
+**Question 9:** 
+
+Use the samples from Question 8 to generate posterior predictions of soil respiration at the observed temperature values (i.e., the same temperature data used in your model fit). Provide a plot with temperature on the x-axis and respiration on the y-axis. The plot should have the mean and 95% predictive uncertainty bounds (i.e., include uncertainty in parameters and in the data model)
 
 **Answer 9:**
 

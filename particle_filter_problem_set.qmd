@@ -1,6 +1,8 @@
 ---
 title: "Particle filter"
-format: html
+format:
+  html:
+    embed-resources: true
 editor: visual
 ---
 

@@ -1,6 +1,8 @@
 ---
 title: "Process model uncertainity"
-format: html
+format:
+  html:
+    embed-resources: true
 editor: visual
 ---
 
@@ -12,7 +14,7 @@ source("https://raw.githubusercontent.com/frec-5174/eco4cast-in-R-book/main/R/he
 source("https://raw.githubusercontent.com/frec-5174/eco4cast-in-R-book/main/R/forest_model.R")
 ```
 
-This chapter applies the concepts in [Chapter -@sec-under-unc] to the forest process model. If you have not reviewed chapter 5 yet, I recommend doing that as a foundation for this Chapter.
+This chapter applies the concepts in <https://frec-5174.github.io/eco4cast-in-R-book/understand-uncertainty.html> to the forest process model. If you have not reviewed that chapter yet, I recommend doing that as a foundation for this Chapter.
 
 ## Setting up simulations
 
