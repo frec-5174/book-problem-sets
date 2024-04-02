@@ -143,8 +143,11 @@ The columns correspond to the following
 Use maximum likelihood to estimate the parameters in the model that predicts the relationship between soil temperature and soil respiration using the Q10 function below
 
 $$\theta_1 * \theta_2 ^{{(T - 20)}\over{10}}$$
+**Question 12:** 
 
 Show all the steps to determine the most likely parameter values, report the parameter values, and plot the data and predictions on the same plot
+
+**Answer 12:** 
 
 
 
