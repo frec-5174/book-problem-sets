@@ -89,6 +89,7 @@ Using the lecture material create a particle filter that uses the forest growth 
 
 #### Step 1: Set up PF
 
+**Question 1**
 Following the code in the PF lecture set up the particle filter.
 
 Instead of using data from a file you will use the following for your data: `obs <- NULL`
@@ -97,7 +98,7 @@ Be sure to:
 
 -   use the mean values for `g`, `u`, and `sd_add` from the MCMC chain as the parameter values
 -   use the distribution of the biomass at age 50 in the MCMC chain as your initial state for the PF
--   The standard deviation for the obseravtions (`sd_data`) is 200.
+-   The standard deviation for the observations (`sd_data`) is 200.
 
 ```{r}
 #ADD CODE TO SET UP PF HERE
@@ -105,7 +106,7 @@ Be sure to:
 
 #### Step 2: Run particle filter
 
-Write the code and run the particle filter based on the examples from the lecture. You will need to include the process model that is in the NIMBLE code above.
+Write the code and run the particle filter based on the examples from the lecture. 
 
 ```{r}
 #ADD PF CODE HERE
@@ -181,7 +182,5 @@ Combine the two PF forecast and evaluate how data assimilation influence the for
 ```
 
 ### Part 5:
-
-Answer the follow question
 
 How did assimilating data influence your forecast for ages 60 to 70? Consider both the mean and uncertainty in your answer.
