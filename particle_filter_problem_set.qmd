@@ -58,7 +58,7 @@ ggplot(plot_data, aes(x = datetime, y = biomass)) +
   theme_bw()
 ```
 
-The following model was used to estimate the posterior distributions of the parameters using a Bayesian framework.
+The following model was used to estimate the posterior distributions of the parameters using a Bayesian framework (i.e., "batch" parameter and state estimation)
 
 ```    
 sim_dates <- seq(as_date("1950-01-01"), length.out = 50, by = "1 year")
