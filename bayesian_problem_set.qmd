@@ -6,9 +6,7 @@ format:
 editor: visual
 ---
 
-## Problem set
-
-Your task is to modify the code below to estimate the posterior distribution of parameters in Q10 function that was in the likelihood analysis problem set. Use the same data as used in the Q10 likelihood exercise.
+## Example code
 
 ```{r}
 #| warning: FALSE
@@ -117,6 +115,8 @@ for(i in 2:num_iter){
 
 ```
 
+Creating a data frame with the parameters from each iteration
+
 ```{r}
 #| warning: FALSE
 d <- tibble(iter = 1:num_iter,
@@ -125,6 +125,7 @@ d <- tibble(iter = 1:num_iter,
   pivot_longer(-iter, values_to = "value", names_to = "parameter")
 ```
 
+Plot the MCMC chains and the posterior distributions 
 ```{r}
 #| warning: FALSE
 
@@ -140,6 +141,12 @@ p2 <- ggplot(d, aes(x = value)) +
 
 p1 / p2
 ```
+
+## Problem set
+
+Your task is to modify the code above to estimate the posterior distribution of parameters in Q10 function that was in the likelihood analysis problem set (likelihood_problem_set.qmd). Use the same soil respiration data as used in the Q10 likelihood question.
+
+The example uses the Michaelis-Menten equation and fake data.  You will NOT use this function and data in your answer.  Use the code as the template for your answer
 
 **Question 1**: 
 
@@ -221,7 +228,9 @@ Randomly select 200 values from the parameters in your posterior distribution. S
 
 Use the samples from Question 8 to generate posterior predictions of soil respiration at the observed temperature values (i.e., the same temperature data used in your model fit). Provide a plot with temperature on the x-axis and respiration on the y-axis. The plot should have the mean and 95% predictive uncertainty bounds (i.e., include uncertainty in parameters and in the data model).
 
-If using tidyverse and ggplot, you can group_by(variable) and summarize to calculate the upper and lower creditable interval using `quantile()` function for each bound (e.g., `quantile(prediction, 0.025)` for the lower interval) and the mean using the `mean()`
+If using tidyverse and ggplot, you can group_by(variable) and summarize to calculate the upper and lower creditable interval using `quantile()` function for each bound (e.g., `quantile(prediction, 0.025)` for the lower interval) and the mean using the `mean()`.  
+
+See https://frec-5174.github.io/eco4cast-in-R-book/bayesian-methods-intro.html#predictive-posterior-distributions for example code.
 
 **Answer 9:**
 
