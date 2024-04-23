@@ -16,6 +16,12 @@ Resources:
 
 <https://frec-5174.github.io/eco4cast-in-R-book/process-model-forecast-evaluation.html>
 
+Find your forecast scores here:
+
+<https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/eco4cast/neon4cast-ci/main/catalog/scores/collection.json>
+
+climatalogy and persistenceRW are the null model_id
+
 ### Question 1
 
 Plot climatology, persistence, and your model for a single forecast day (one reference_datetime) on the same plot.  Use geom_ribbon to plot the uncertainty, geom_line to plot the median, and geom_point to plot the observations.
