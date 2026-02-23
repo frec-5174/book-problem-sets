@@ -183,7 +183,7 @@ write_csv(forecast_df_EFI, forecast_file)
 neon4cast::forecast_output_validator(forecast_file)
 
 
-#neon4cast::submit(forecast_file =  forecast_file, ask = FALSE) # if ask = T (default), it will produce a pop-up box asking if you want to submit
+neon4cast::submit(forecast_file =  forecast_file, ask = FALSE) # if ask = T (default), it will produce a pop-up box asking if you want to submit
 
 #--------------------------#
 
